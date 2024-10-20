@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.contrib.messages import constants as mensajes_de_error
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -151,3 +152,10 @@ EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
+MESSAGE_TAGS={
+    mensajes_de_error.DEBUG:'debug',
+    mensajes_de_error.INFO:'info',
+    mensajes_de_error.SUCCESS:'success',
+    mensajes_de_error.WARNING:'warning',
+    mensajes_de_error.ERROR:'danger',
+}
