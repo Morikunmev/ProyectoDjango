@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'autentication',
     'crispy_forms',
     'crispy_bootstrap4',
+    'pedidos'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

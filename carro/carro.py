@@ -6,6 +6,8 @@ class Carro:
         if not carro:
             carro = self.session["carro"]={}
         self.carro = carro
+    def items(self):
+        return self.carro.items()  # Devuelve los elementos del carrito
     def agregar(self, producto):
         if str(producto.id) not in self.carro.keys():
             # Verifica si la imagen no es nula antes de acceder a su URL
